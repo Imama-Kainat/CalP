@@ -20,6 +20,21 @@ public class BankAccount {
         }
         balance += amount; // Add the amount to balance
     }
+    public static void main(String[] args) {
+        try {
+            BankAccount account = new BankAccount(100.0);
+            System.out.println("Initial Balance: " + account.accountBalance());
+
+            account.deposit(50.0);
+            System.out.println("After Deposit: " + account.accountBalance());
+
+            account.withdraw(30.0);
+            System.out.println("After Withdrawal: " + account.accountBalance());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 
 
 }
