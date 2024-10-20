@@ -14,6 +14,12 @@ public class BankAccount {
             throw new Exception("Insufficient funds.");
         }
         balance -= amount; // Deduct the amount from balance
+    }public void deposit(double amount) throws Exception {
+        if (amount < 0) {
+            throw new Exception("Deposit amount must be positive.");
+        }
+        balance += amount; // Add the amount to balance
     }
+
 
 }
